@@ -20,6 +20,8 @@ form {
 }
 
 input {
+    font-family: Arial;
+    letter-spacing: 5px;
     border: 1px solid #c0c0c0;
     margin-bottom: 50px;
     padding: 15px;

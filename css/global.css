@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'IranSans';
+  src: url('./font/IranianSans.ttf');
+}
+
 :root {
   --color-primary: #2465f7;
   --color-secondary: #1e66f72a;
@@ -10,7 +15,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'IranSans';
 }
 
 body {
@@ -33,22 +38,11 @@ body {
 
 @keyframes rotation {
   0% {
-    transform: rotate(-90deg);
+    transform: rotate(0deg);
   }
-  
-  25% {
-    transform: rotate(90deg);
-  }
-  
-  50% {
-    transform: rotate(-90deg);
-  }
-  
-  75% {
-    transform: rotate(90deg);
-  }
-  
-  50% {
-    transform: rotate(-90deg);
+
+  100% {
+    transform: rotate(-360deg);
+
   }
 }

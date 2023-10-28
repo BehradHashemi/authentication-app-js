@@ -7,35 +7,41 @@ const logOut = document.querySelector('#logout');
 const renderUsers = (users) => {
     mainContent.innerHTML = '';
 
-    users.forEach((user) => {
-        const jsx = `
-        <div id='card'>
-            <h3>${user.id}</h3>
-            <div>
-                <p><i class='fa-solid fa-user'></i> Name:</p>
-                <span>${user.name.firstname} ${user.name.lastname}</span>
-            </div>
-            <div>
-                <p><i class='fa-solid fa-paperclip'></i> Username:</p>
-                <span>${user.username}</span>
-            </div>
-            <div>
-                <p><i class='fa-solid fa-envelope'></i> Email:</p>
-                <span>${user.email}</span>
-            </div>
-            <div>
-                <p><i class='fa-solid fa-phone'></i> Phone:</p>
-                <span>${user.phone}</span>
-            </div>
-            <div>
-                <p><i class='fa-solid fa-location-dot'></i> Address:</p>
-                <span>${user.address.city}-${user.address.street}-${user.address.zipcode}</span>
-            </div>
-        </div>
-        `;
-        mainContent.innerHTML += jsx;
-    });
+    const userOne = users[1];
 
+    const firstname = userOne.name.firstname;
+    const substring = firstname.slice(0, 1)
+    const upperWord = substring.toUpperCase()
+    const finalfirstname = firstname.replace(substring, upperWord)
+
+    const lastname = userOne.name.lastname;
+    const substringLast = lastname.slice(0, 1)
+    const upperWordLast = substringLast.toUpperCase()
+    const finallastname = lastname.replace(substringLast, upperWordLast)
+
+
+    const phone = userOne.phone;
+
+    const jsx = `
+            <div>
+                <p><i class='fa-solid fa-user'></i> نام و نام خانوادگی: <span>${finalfirstname} ${finallastname}</span></p>
+            </div>
+            <div>
+                <p><i class='fa-solid fa-paperclip'></i> نام کاربری: <span>${userOne.username}</span></p>
+            </div>
+            <div>
+                <p><i class='fa-solid fa-envelope'></i> ایمیل: <span>${userOne.email}</span></p>
+            </div>
+            <div>
+                <p><i class='fa-solid fa-phone'></i> تلفن: <span>${phone}</span></p>
+            </div>
+            <div>
+                <p><i class='fa-solid fa-location-dot'></i> آدرس: <span>${userOne.address.city}-${userOne.address.street}-${userOne.address.zipcode}</span></p>
+            </div>
+        `;
+    mainContent.innerHTML += jsx;
+
+    console.log(`your info = ${JSON.stringify(users[1])}`);
 }
 
 const init = async () => {
