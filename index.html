@@ -26,7 +26,7 @@
   </header>
   <div id="search">
     <h1>Shop:</h1>
-    <input type="text" placeholder="search products..."/>
+    <input type="text" placeholder="search products..." />
     <div id="container">
       <div id="products">
         <span id="loader"></span>
@@ -46,6 +46,14 @@
       </div>
     </div>
   </div>
+  <footer>
+    &copy; All Rights Reserved<span id="time"></span>
+    <script>
+      const timeBox = document.getElementById('time')
+      const timeRunner = new Date().getFullYear()
+      timeBox.innerHTML = timeRunner;
+    </script>
+  </footer>
   <script type="module" src="./index.js"></script>
 </body>
 
