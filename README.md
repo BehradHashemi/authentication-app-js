@@ -11,6 +11,8 @@
 - privet panel
 - fetch API
 - set as cookie
+- search for products
+- filter products
 
 
 ## Installation ##
