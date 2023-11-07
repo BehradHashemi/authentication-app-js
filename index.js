@@ -1,5 +1,6 @@
 import { getCookie } from "./utils/cookie.js";
 import { getData } from "./utils/httpReq.js";
+import { e2p } from "./utils/replaceNumber.js";
 
 let allProducts = null;
 
@@ -22,19 +23,19 @@ const renderProducts = products => {
             <img alt='${product.title}' src='${product.image}' />
             <h4>${product.title.split(' ').slice(0, 3).join(' ')}</h4>
             <div id='price'> 
-                <p>$ ${product.price.toFixed()}</p>
+                <p>$ ${e2p(product.price)}</p>
                 <button>
-                Buy
+                خرید
                 <i class='fa-solid fa-cart-shopping'></i>
                 </button>
             </div>
             <div id='rate'>
                 <i class='fa-solid fa-star'></i>
-                <span>${product.rating.rate}</span>
+                <span>${e2p(product.rating.rate)}</span>
             </div>
             <div id='count'>
                 <i class='fa-solid fa-user'></i>
-                <span>${product.rating.count}</span>
+                <span>${e2p(product.rating.count)}</span>
             </div>
         </div>
         `;

@@ -1,4 +1,9 @@
 @font-face {
+  font-family: 'Yekan';
+  src: url('./font/Yekan.ttf');
+}
+
+@font-face {
   font-family: 'IranSans';
   src: url('./font/IranianSans.ttf');
 }
@@ -15,13 +20,22 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'IranSans';
+  user-select: none;
+  font-family: 'Yekan', 'IranSans';
 }
 
 body {
   max-width: 1200px;
   margin: auto;
   background-color: var(--color-background);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 #loader {

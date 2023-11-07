@@ -1,5 +1,6 @@
 import authHandler from './utils/authorization.js';
 import { getData } from './utils/httpReq.js';
+import { e2p } from './utils/replaceNumber.js';
 
 const mainContent = document.querySelector('#container');
 const logOut = document.querySelector('#logout');
@@ -33,10 +34,10 @@ const renderUsers = (users) => {
                 <p><i class='fa-solid fa-envelope'></i> ایمیل: <span>${userOne.email}</span></p>
             </div>
             <div>
-                <p><i class='fa-solid fa-phone'></i> تلفن: <span>${phone}</span></p>
+                <p><i class='fa-solid fa-phone'></i> تلفن: <span>${e2p(phone)}</span></p>
             </div>
             <div>
-                <p><i class='fa-solid fa-location-dot'></i> آدرس: <span>${userOne.address.city}-${userOne.address.street}-${userOne.address.zipcode}</span></p>
+                <p><i class='fa-solid fa-location-dot'></i> آدرس: <span>${userOne.address.city}_${userOne.address.street}_${userOne.address.zipcode}</span></p>
             </div>
         `;
     mainContent.innerHTML += jsx;

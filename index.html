@@ -4,15 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FronckTeam</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link rel="stylesheet" href="./css/global.css" />
   <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="icon" href="./img/logo.png">
+  <title>FronckTeam | صفحه اصلی</title>
 </head>
 
 <body>
   <header>
-    <h3>فرانک استور</h3>
+    <h3><a href="https://fronck.netlify.app" target="_blank">فرانک استور</a></h3>
     <div>
       <a href="./auth.html" id="login">
         <i class="fa-solid fa-right-to-bracket"></i>
@@ -47,12 +48,51 @@
     </div>
   </div>
   <footer>
-    &copy; All Rights Reserved<span id="time"></span>
-    <script>
-      const timeBox = document.getElementById('time')
-      const timeRunner = new Date().getFullYear()
-      timeBox.innerHTML = timeRunner;
-    </script>
+    <div class='footer-about'>
+      <h3>
+        <a href='https://fronck.netlify.app/about' target="_blank">درباره فِرانک</a>
+      </h3>
+      <p>فرانک تیم وبسایتی با هدف آموزش برنامه نویسی به افراد، با سبکی نو و بدور از چالش های همیشگی شروع یادگیری می
+        باشد. ما در فرانک تیم همواره می کوشیم تا برترین دوره های آموزشی برنامه نویسی را که توسط مدرسین باتجربه تدریس می
+        گردند، در اختیار مخاطبان خود قرار دهیم تا شاهد موفقیت و درخشش آنها در شرکت ها و موقعیت های شغلی معتبر باشیم.
+        <br />
+        فرانک تیم در پاییز سال ۱۴۰۲، توسط
+        <a href="https://fronck.netlify.app/@behradhashemi" target="_blank"> بهراد هاشمی </a>
+        و
+        <a href="https://fronck.netlify.app/@mohammadsadqhashemian" target="_blank"> محمد صادق هاشمیان </a> خلق شد.
+      </p>
+    </div>
+    <div class="footer-2">
+      <div class='footer-links'>
+        <h3>بخش های سایت</h3>
+        <ul>
+          <li>
+            <a href='https://fronck.netlify.app/courses' target="_blank">دوره های آموزشی</a>
+          </li>
+          <li>
+            <a href='https://fronck.netlify.app/blogs' target="_blank">مقالات</a>
+          </li>
+          <li>
+            <a href='https://fronck.netlify.app/about' target="_blank">درباره ما</a>
+          </li>
+        </ul>
+      </div>
+      <div class="social-media">
+        <h3>شبکه های اجتماعی</h3>
+        <ul>
+          <li>
+            <a href="https://t.me/fronckteam" target="_blank">
+              تلگرام
+            </a>
+          </li>
+          <li>
+            <a href="https://instgram.com/fronckteam" target="_blank">
+              اینستاگرام
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </footer>
   <script type="module" src="./index.js"></script>
 </body>

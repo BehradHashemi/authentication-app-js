@@ -5,12 +5,12 @@ header {
     margin-bottom: 30px;
 }
 
-header h3 {
+header h3 a {
     color: var(--color-primary);
     font-size: 1.6rem;
 }
 
-header a {
+header div a {
     color: #000;
     text-decoration: none;
     background: #fff;
@@ -39,20 +39,25 @@ header a:hover {
 
 #search input {
     direction: ltr;
-    width: 250px;
-    padding: 10px;
+    width: 300px;
+    padding: 8px 10px;
     border: 1px solid #c0c0c0;
     border-radius: 5px;
     color: var(--color-primary);
     font-size: 1rem;
-    font-family: Arial;
 }
 
 #search input:focus {
     outline: none;
 }
 
+#search button i {
+    margin-right: 5px;
+}
+
 #search button {
+    display: flex;
+    align-items: center;
     padding: 10px;
     border-radius: 5px;
     border: none;
@@ -69,14 +74,16 @@ header a:hover {
 }
 
 #container {
+    flex-direction: column-reverse;
     display: flex;
     margin: 80px 0 40px;
 }
 
 #filter {
+    margin: 15px;
     padding: 20px;
     background: #fff;
-    margin-right: 20px;
+    margin-bottom: 20px;
     height: fit-content;
     border-radius: 10px;
 }
@@ -93,10 +100,18 @@ header a:hover {
     margin-left: 20px;
 }
 
+#filter ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 #filter li {
-    font-family: Arial;
     list-style: none;
-    padding: 10px 0;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -107,21 +122,21 @@ header a:hover {
 #filter .selected {
     background: var(--color-secondary);
     color: var(--color-primary);
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 5px;
 }
 
 #products {
     width: 100%;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: right;
 }
 
 #products>div {
     background: #fff;
-    width: 250px;
-    margin-bottom: 20px;
+    margin: 20px auto;
     padding: 15px;
     border-radius: 10px;
     position: relative;
@@ -130,12 +145,11 @@ header a:hover {
 img {
     width: 220px;
     height: 220px;
-    margin: 50px 0 40px;
+    margin: 50px auto 40px;
 }
 
 h4 {
     color: var(--color-primary);
-    font-family: Arial;
 }
 
 #price {
@@ -148,11 +162,9 @@ h4 {
 #price p {
     color: #808080;
     font-weight: 600;
-    font-family: Arial;
 }
 
 #price button {
-    font-family: Arial;
     color: var(--color-primary);
     background: var(--color-secondary);
     border: none;
@@ -169,10 +181,11 @@ h4 {
 }
 
 #rate {
-    font-family: Arial;
-
+    display: flex;
+    align-items: center;
     position: absolute;
     top: 15px;
+    left: 15px;
     background: var(--color-background);
     color: var(--color-warning);
     padding: 5px;
@@ -180,8 +193,14 @@ h4 {
     font-size: 0.9rem;
 }
 
+#rate i,
+#count i {
+    margin-left: 5px;
+}
+
 #count {
-    font-family: Arial;
+    display: flex;
+    align-items: center;
     position: absolute;
     top: 15px;
     right: 15px;
@@ -192,37 +211,141 @@ h4 {
     font-size: 0.9rem;
 }
 
+@media (width <=480px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 15px;
+        margin-bottom: 30px;
+    }
+
+    header h3 {
+        color: var(--color-primary);
+        font-size: 1.4rem;
+    }
+
+    header a {
+        padding: 5px 10px;
+    }
+
+    #search h1 {
+        font-size: 1.3rem;
+    }
+}
+
 footer {
-    direction: ltr;
-    font-family: Arial;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 30px auto 5px;
     width: 100%;
-    height: 50px;
-    color: var(--color-primary);
-    border-radius: 10px;
-    padding: 30px 0;
-    margin-bottom: 30px;
-    font-size: 1.2rem;
-    font-weight: 700;
+    height: max-content;
+    border-top: 2px solid #c9c9c9;
+    padding: 25px 0;
 }
 
-footer span {
-    margin-left: 5px;
+footer a {
+    font-family: 'Yekan';
+    color: #1178f3;
 }
 
-@media (max-width: 768px) {
-    #container {
-        flex-direction: column-reverse;
+footer a:hover {
+    color: #6776ff;
+}
+
+.footer-about,
+.footer-2 {
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 10px;
+    color: #6b7280;
+}
+
+.footer-about h3,
+.footer-2 h3 {
+    color: #000;
+    margin-bottom: 20px
+}
+
+.footer-about {
+    margin-left: 15px;
+}
+
+.footer-about h3 a {
+    color: #000;
+}
+
+.footer-about p {
+    font-family: 'Yekan';
+    text-align: justify;
+}
+
+.footer-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links ul li {
+    margin: 15px 0;
+}
+
+.footer-links ul li a {
+    color: #6b7280;
+}
+
+.footer-links ul li a:hover {
+    color: #6776ff;
+}
+
+
+.footer-links ul li&::marker {
+    content: '';
+}
+
+.social-media {
+    text-align: left;
+}
+
+.social-media ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media ul li a {
+    /* font-size: 2rem; */
+    color: #6b7280;
+}
+
+.social-media ul li a:hover {
+    color: #6776ff;
+}
+
+@media (width <=800px) {
+    footer {
+        flex-direction: column;
+    }
+}
+
+@media (width <=430px) {
+    footer {
+        padding: 5px 0;
     }
 
-    #filter {
-        margin: 0 0 30px;
+    .footer-about,
+    .footer-2 {
+        margin-bottom: 0;
     }
 
-    #products {
-        margin: 0 auto;
-        justify-content: center;
+    .footer-2 {
+        text-align: right;
+        flex-direction: column;
+
+        .social-media {
+            margin-top: 15px;
+            text-align: right;
+
+            ul {
+                flex-direction: column;
+            }
+        }
     }
 }
