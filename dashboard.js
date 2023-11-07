@@ -37,7 +37,7 @@ const renderUsers = (users) => {
                 <p><i class='fa-solid fa-phone'></i> تلفن: <span>${e2p(phone)}</span></p>
             </div>
             <div>
-                <p><i class='fa-solid fa-location-dot'></i> آدرس: <span>${userOne.address.city}_${userOne.address.street}_${userOne.address.zipcode}</span></p>
+                <p><i class='fa-solid fa-location-dot'></i> آدرس: <span>${userOne.address.city}_${userOne.address.street}_${e2p(userOne.address.zipcode)}</span></p>
             </div>
         `;
     mainContent.innerHTML += jsx;

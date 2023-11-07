@@ -236,7 +236,7 @@ h4 {
 footer {
     display: flex;
     justify-content: space-between;
-    margin: 30px auto 5px;
+    margin: 30px auto 15px;
     width: 100%;
     height: max-content;
     border-top: 2px solid #c9c9c9;
