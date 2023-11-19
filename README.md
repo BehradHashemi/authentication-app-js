@@ -16,7 +16,7 @@
 
 
 ## Installation ##
-redy to use
+ready to use
 - Just open index.html
 
 ## Social
