@@ -16,7 +16,7 @@ const listItems = document.querySelectorAll('li')
 
 const renderProducts = products => {
     mainContent.innerHTML = '';
-
+    console.log(products);
     products.forEach(product => {
         const jsx = `
         <div>
@@ -54,15 +54,15 @@ const init = async () => {
 
     allProducts = await getData('products');
     renderProducts(allProducts)
-    
+
     // console.log(allProducts);
 };
 
 const searchHandler = () => {
     const query = inputBox.value.trim().toLowerCase();
-    
+
     if (!query) renderProducts(allProducts);
-    const filteredProducts = allProducts.filter((product)=>product.title.toLowerCase().includes(query))
+    const filteredProducts = allProducts.filter((product) => product.title.toLowerCase().includes(query))
     renderProducts(filteredProducts)
 };
 
