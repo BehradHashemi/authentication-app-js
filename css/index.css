@@ -103,7 +103,6 @@ header a:hover {
 #filter ul {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -211,6 +210,13 @@ h4 {
     font-size: 0.9rem;
 }
 
+@media (width <=768px) {
+    #filter ul {
+        overflow-x: scroll;
+    }
+}
+
+
 @media (width <=480px) {
     header {
         display: flex;
@@ -231,6 +237,7 @@ h4 {
     #search h1 {
         font-size: 1.3rem;
     }
+
 }
 
 footer {
